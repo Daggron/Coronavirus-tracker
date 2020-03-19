@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.name{
+    color: #2847d1;
+}
+
+.red{
+    color: red;
+}
+
+.con{
+    color: royalblue;
+}
+
+.green{
+    color: mediumseagreen;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: 'Lato', sans-serif;
+    margin-top: 20px;
+}
+.Statbox{
+    background: seashell;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.countrySelector{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.list{
+    list-style: none;
+}
