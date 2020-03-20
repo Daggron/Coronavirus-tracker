@@ -43,6 +43,8 @@
     border: 1px solid royalblue;
     width: 30%;
     font-size: 15px;
+    background: #fcfcfc;
+    border-radius: 5px;
 }
 
 .list{
@@ -74,5 +76,7 @@
         border: 1px solid royalblue;
         width: 70%;
         font-size: 15px;
+        background-color: #fcfcfc;
+        border-radius: 5px;
     }
 }
