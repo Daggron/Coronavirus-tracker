@@ -21,7 +21,7 @@ const CountrySelecetor = () =>{
     
     return(
         <div className={style.countrySelector}>
-            <select onChange={handleChange}>
+            <select className={style.select} onChange={handleChange}>
                 {
                     Object.entries(data.countries).map(([countries , code])=>{
                         return(

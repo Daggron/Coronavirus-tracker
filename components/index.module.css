@@ -40,3 +40,23 @@
 .list{
     list-style: none;
 }
+
+@media(max-width:720px){
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Lato', sans-serif;
+        margin-top: 20px;
+    }
+    .Statbox{
+        margin-top: 20px;
+    }
+    .select{
+        height: 30px;
+        border: 1px solid royalblue;
+        width: 70%;
+        font-size: 15px;
+    }
+}
