@@ -4,7 +4,6 @@ import style from './index.module.css';
 export default function Precaution() {
     return (
         <div>
-            <p>
                 <ol className={style.list}>
                     <li>
                         Stay At Home 🏠 
@@ -20,7 +19,6 @@ export default function Precaution() {
                     </li>
                 </ol>
                 <span>Made with 💝 by Daggron 😆</span>
-            </p>
         </div>
     )
 }
