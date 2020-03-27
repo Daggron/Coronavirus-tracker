@@ -8,10 +8,8 @@ const CountrySelecetor = () =>{
     const [name , setName] = useState('India');
 
     const handleChange = (e) =>{
-        console.log(e.target.value);
-        let code = e.target.value.split(',');
-        setCountry(code[0]);
-        setName(code[1]);
+        setCountry(e.target.value);
+        setName(e.target.value);
     }
 
     const {loading , error , data} = FetchData('https://covid19.mathdro.id/api/countries');
@@ -23,14 +21,14 @@ const CountrySelecetor = () =>{
         <div className={style.countrySelector}>
             <select className={style.select} onChange={handleChange}>
                 {
-                    Object.entries(data.countries).map(([countries , code])=>{
+                    Object.entries(data.countries).map((countries)=>{
                         return(
-                            <option selected={country===data.iso3[code]} value={`${data.iso3[code]},${countries}`} key={countries+code}>
-                                {countries}
+                            <option defaultValue={country===countries[1].iso3}  value={countries[1].iso3} key={countries[1].name+countries[1].iso3}>
+                                {countries[1].name}
                             </option>
                         )
                     })
-                }
+            }
             </select>
             <br/>
             <h1>Currently showing <span className={style.name}>{`${name}`}</span></h1>
