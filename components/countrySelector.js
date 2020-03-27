@@ -19,7 +19,6 @@ const CountrySelecetor = () =>{
     if(loading) return <p>Loading....</p>
     if(error) return <p>Can't find countries.Try Again Later</p>
     if(!data) return <p>Loading...</p>
-    
     return(
         <div className={style.countrySelector}>
             <select className={style.select} onChange={handleChange}>
