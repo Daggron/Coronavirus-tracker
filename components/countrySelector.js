@@ -8,8 +8,11 @@ const CountrySelecetor = () =>{
     const [name , setName] = useState('India');
 
     const handleChange = (e) =>{
-        setCountry(e.target.value);
-        setName(e.target.value);
+        const data = e.target.value;
+        let res = data.split(',');
+        console.log(res);
+        setCountry(res[0]);
+        setName(res[1]);
     }
 
     const {loading , error , data} = FetchData('https://covid19.mathdro.id/api/countries');
@@ -23,7 +26,7 @@ const CountrySelecetor = () =>{
                 {
                     Object.entries(data.countries).map((countries)=>{
                         return(
-                            <option defaultValue={country===countries[1].iso3}  value={countries[1].iso3} key={countries[1].name+countries[1].iso3}>
+                            <option defaultValue={country===countries[1].iso3}  value={countries[1].iso3+','+countries[1].name} key={countries[1].name+countries[1].iso3}>
                                 {countries[1].name}
                             </option>
                         )
